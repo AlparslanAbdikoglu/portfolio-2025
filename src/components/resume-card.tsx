@@ -17,8 +17,10 @@ interface ResumeCardProps {
   href?: string;
   badges?: readonly string[];
   period: string;
-  description?: string;
+  description: readonly string[]; // Change this to an array of strings
+  htmlLine: string; // New prop for HTML line
 }
+
 export const ResumeCard = ({
   logoUrl,
   altText,
@@ -28,6 +30,7 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  htmlLine, // Destructure the new prop
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -52,7 +55,7 @@ export const ResumeCard = ({
               alt={altText}
               className="object-contain"
             />
-            <AvatarFallback>{altText[0]}</AvatarFallback>
+            <AvatarFallback>{altText ? altText[0] : "A"}</AvatarFallback>
           </Avatar>
         </div>
         <div className="flex-grow ml-4 items-center flex-col group">
@@ -91,7 +94,6 @@ export const ResumeCard = ({
               initial={{ opacity: 0, height: 0 }}
               animate={{
                 opacity: isExpanded ? 1 : 0,
-
                 height: isExpanded ? "auto" : 0,
               }}
               transition={{
@@ -103,8 +105,15 @@ export const ResumeCard = ({
               {description}
             </motion.div>
           )}
+          {htmlLine && (
+            <div
+              className="mt-2 text-xs sm:text-sm justify-between"
+              dangerouslySetInnerHTML={{ __html: htmlLine }} // Render the HTML line
+            />
+          )}
         </div>
       </Card>
     </Link>
   );
 };
+
