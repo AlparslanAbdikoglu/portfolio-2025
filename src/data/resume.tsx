@@ -111,14 +111,6 @@ export const DATA = {
       
   education: [
     {
-      school: "Meisei University – Tokyo, Japan",
-      href: "",
-      degree: "Graduate School of Humanities – MA International Communication Major (expected)",
-      logoUrl: "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg", // Example image URL
-      start: "Pending",
-      end: "Addmission",
-    },
-    {
       school: " University of Szeged – Szeged, Hungary",
       href: "",
       degree: "Law & Political Science- Bachelor of Art International Relations GPA: 4.60",
@@ -137,9 +129,9 @@ export const DATA = {
       dates: "Aug 2024 - Sept 2024",
       active: true,
       description:
-        "Its built on react & nextjs with costume backend built from the ground up using medusa.js API access to Webshippy to monitor and update storage based on available products.plus Paying integration with stripe and invoice system such as Billingó all automated when a purchase is made.",
+        "Its built on react & with costume backend built from the ground up using medusa.js API access to Webshippy to monitor and update storage based on available products.plus Paying integration with stripe and invoice system such as Billingó all automated when a purchase is made.",
       technologies: [
-        "Next.js",
+        "react",
         "Typescript",
         "PostgreSQL",
         "Clerk",
@@ -147,6 +139,9 @@ export const DATA = {
         "Stripe",
         "Shadcn UI",
         "Medusa.js",
+        "Webshippy",
+        "Billingó",
+        "i8n localization"
       ],
       links: [
         {
@@ -165,18 +160,17 @@ export const DATA = {
         "",
     },
     {
-      title: "Yap App",
+      title: "sentiment app",
       href: "",
       dates: "Jan 2025 - Present",
       active: true,
       description:
-        "Designed, developed for better sleeping habit.",
+        "part of the reserach project.",
       technologies: [
-        "React native",
+        "React",
         "Typescript",
-        "Appwrite",
+        "auth.js",
         "PostgreSQL",
-        "nativewind",
       ],
       links: [
         {
