@@ -161,11 +161,11 @@ export const DATA = {
     },
     {
       title: "sentiment app",
-      href: "",
+      href: "https://github.com/AlparslanAbdikoglu/sentimeter",
       dates: "Jan 2025 - Present",
       active: true,
       description:
-        "part of the reserach project.",
+        "part of the reserach project for MA studies heavy wip.",
       technologies: [
         "React",
         "Typescript",
@@ -180,7 +180,7 @@ export const DATA = {
         },
         {
           type: "Source",
-          href: "",
+          href: "https://github.com/AlparslanAbdikoglu/sentimeter",
           icon: <Icons.github className="size-3" />,
         },
       ],
